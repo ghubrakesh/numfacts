@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Fact</title>
+    <style>
+        /* Center-align the content */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh; 
+
+            background-color: rgb(92, 1, 92);
+        }
+        .container {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            color: yellow;
+            text-align: center;
+        }
+        button{
+            padding: 15px 40px;
+            background: #000;
+            border:0;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: helvetica;
+            font-size: 12px;
+            letter-spacing: 3px;
+            position: relative;
+            transition:         all .4s cubic-bezier(0.645, 0.045, 0.355, 1);
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            }
+
+            button:hover{
+            padding: 15px 20px 15px 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: greenyellow; ">{{ number }}</h1>
+        {% if fact %}
+            <div>
+                <h5>{{ fact }}</h5>
+                <br>
+            </div>
+        {% else %}
+            No Fact Found for Number {{ fact }}
+        {% endif %}
+            <button onclick="goBack()" id="back-button">Go Back</button>
+        </div>
+        
+        <script>
+            function goBack() {
+                window.location.href = "/"; // Redirect to the home page
+            }
+        </script>
+</body>
+
+<footer style="color:white; background-color: transparent; padding: 20px; position: absolute;text-align: center; bottom: 0; width: 97%;">
+    Made with <svg viewBox="0 0 1792 1792" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="height: 0.8rem;"><path d="M896 1664q-26 0-44-18l-624-602q-10-8-27.5-26T145 952.5 77 855 23.5 734 0 596q0-220 127-344t351-124q62 0 126.5 21.5t120 58T820 276t76 68q36-36 76-68t95.5-68.5 120-58T1314 128q224 0 351 124t127 344q0 221-229 450l-623 600q-18 18-44 18z" fill="#e25555"></path></svg>
+    By <a href="http://bit.ly/knowrakesh" style="color: rgb(255, 230, 0); text-decoration: none; ">Rakesh</a>
+</footer>
+
+<style>
+    footer {
+        font-family: 'Catamaran', 'Hammersmith One', sans-serif;
+        border-bottom: 3px solid red;
+    }
+</style>
+
+</html>
